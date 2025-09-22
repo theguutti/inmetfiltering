@@ -190,6 +190,10 @@ O sistema inclui tratamento para:
 - Processamento em memória pode ser limitado para arquivos muito grandes
 - Filtro por data depende da consistência do formato de data nos arquivos CSV
 
+## Dados
+Este repositório inclui apenas arquivos CSV de exemplo. 
+Para usar o sistema completo, adicione seus próprios dados do INMET na pasta `inmet/ANO/`.
+
 ## Desenvolvido por
 
 Projeto desenvolvido como atividade acadêmica da disciplina Tópicos Especiais - Turma 3INFO-2025 pelos alunos íkaro Nogueira Rossotti e Kezia Luiza do Bomfim Oliveira.
