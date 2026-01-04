@@ -1,51 +1,51 @@
-# Sistema de Análise de Dados Meteorológicos INMET
+Sistema de Análise de Dados Meteorológicos INMET
 
-## Descrição
+Descrição
 
 Este projeto é uma aplicação em Python desenvolvida para análise de microdados meteorológicos fornecidos pelo INMET (Instituto Nacional de Meteorologia). O sistema permite carregar, processar e analisar dados climáticos de estações meteorológicas espalhadas pelo Brasil, oferecendo funcionalidades para visualização de dados, cálculo de estatísticas, filtros por data e exportação de relatórios.
 
-## Funcionalidades
+Funcionalidades
 
-### **1. Carregamento de Dados**
+1. Carregamento de Dados
 - Leitura automática de arquivos CSV do INMET organizados por ano
 - Suporte aos anos de 2020 a 2024
 - Validação e tratamento de dados inconsistentes
 - Feedback detalhado do processo de carregamento
 
-### **2. Visualização de Estações**
+2. Visualização de Estações
 - Exibição de informações completas de todas as estações carregadas
 - Dados incluem: nome, código, localização, coordenadas e altitude
 - Contador de registros por estação
 
-### **3. Cálculo de Estatísticas**
-- **Métricas calculadas para todas as estações**:
+3. Cálculo de Estatísticas
+- Métricas calculadas para todas as estações:
   - Temperatura média (°C)
   - Umidade máxima (%)
   - Precipitação total (mm)
 - Estatísticas calculadas automaticamente para cada estação carregada
 
-### **4. Filtro Avançado por Data**
-- **Formatos de data aceitos**: YYYY/MM/DD ou DD/MM/YYYY
-- **Funcionalidades do filtro**:
+4. Filtro Avançado por Data
+- Formatos de data aceitos: YYYY/MM/DD ou DD/MM/YYYY
+- Funcionalidades do filtro:
   - Filtrar registros por período específico
   - Menu interativo para dados filtrados
   - Visualizar informações das estações no período
   - Calcular estatísticas apenas do período filtrado
   - Ver exemplos de registros do período
 
-### **5. Exportação de Relatórios**
+5. Exportação de Relatórios
 - Relatórios completos de todas as estações carregadas
 - Relatórios específicos de períodos filtrados (com nomenclatura automática)
 - Formato de saída em arquivo de texto (.txt)
 - Codificação UTF-8 para caracteres especiais
 - Inclui estatísticas e exemplos de registros
 
-## Requisitos
+Requisitos
 
 - Python 3.x (apenas bibliotecas padrão)
 - Arquivos CSV do INMET no formato especificado
 
-## Como Executar
+Como Executar
 
 1. Certifique-se de que você tem Python 3.x instalado
 2. Clone ou baixe o projeto
@@ -56,7 +56,7 @@ Este projeto é uma aplicação em Python desenvolvida para análise de microdad
 python main.py
 ```
 
-## Menu de Opções
+Menu de Opções
 
 Ao executar o programa, você verá o seguinte menu:
 
@@ -71,7 +71,7 @@ MENU:
 6. Sair
 ```
 
-### Exemplo de Execução no Terminal
+Exemplo de Execução no Terminal
 
 ```
 PS C:\projeto> python main.py
@@ -136,19 +136,19 @@ BRASILIA:
  > Precipitação total: 125.50mm
 ```
 
-## Formato dos Dados
+Formato dos Dados
 
 O sistema lê arquivos CSV do INMET com a seguinte estrutura:
-- **Cabeçalho**: Informações da estação (região, UF, nome, código, coordenadas)
-- **Dados**: Registros horários com temperatura, umidade, precipitação e outros parâmetros
+- Cabeçalho: Informações da estação (região, UF, nome, código, coordenadas)
+- Dados: Registros horários com temperatura, umidade, precipitação e outros parâmetros
 
-## Classes Principais
+Classes Principais
 
-- **RegistroMeteorologico**: Representa um registro individual de dados meteorológicos
-- **EstacaoMeteorologica**: Representa uma estação meteorológica e seus registros
-- **Estatisticas**: Calcula estatísticas dos registros meteorológicos
+- RegistroMeteorologico: Representa um registro individual de dados meteorológicos
+- EstacaoMeteorologica: Representa uma estação meteorológica e seus registros
+- Estatisticas: Calcula estatísticas dos registros meteorológicos
 
-## Tratamento de Erros
+Tratamento de Erros
 
 O sistema inclui tratamento para:
 - Arquivos não encontrados ou pastas inexistentes
@@ -157,7 +157,7 @@ O sistema inclui tratamento para:
 - Erros de conversão de tipos (string para float)
 - Formatos de data inválidos
 
-## Observações
+Observações
 
 - O sistema utiliza apenas bibliotecas padrão do Python
 - Os dados são processados em memória
@@ -165,35 +165,36 @@ O sistema inclui tratamento para:
 - O separador usado nos CSVs é o ponto e vírgula (;)
 - Valores decimais podem usar vírgula, que são convertidos automaticamente
 
-## Funcionalidades Técnicas Implementadas
+Funcionalidades Técnicas Implementadas
 
-### **Programação Orientada a Objetos**
-- **Encapsulamento**: Propriedades privadas com getters/setters
-- **Composição**: Estações contêm listas de registros meteorológicos
-- **Validação de dados**: Tratamento de tipos e valores inválidos
+Programação Orientada a Objetos
+- Encapsulamento: Propriedades privadas com getters/setters
+- Composição: Estações contêm listas de registros meteorológicos
+- Validação de dados: Tratamento de tipos e valores inválidos
 
-### **Tratamento de Erros Robusto**
+Tratamento de Erros Robusto
 - Validação de formato de datas com múltiplos formatos aceitos
 - Tratamento de arquivos corrompidos ou inexistentes
 - Conversão segura de tipos de dados (float, string)
 - Validação de entradas do usuário
 
-### **Funcionalidades Avançadas**
-- **Filtros temporais** com validação de períodos
-- **Menu interativo** para dados filtrados
-- **Relatórios customizáveis** por período
-- **Sistema de nomenclatura automática** para arquivos de relatório
+Funcionalidades Avançadas
+- Filtros temporais com validação de períodos
+- Menu interativo para dados filtrados
+- Relatórios customizáveis por período
+- Sistema de nomenclatura automática para arquivos de relatório
 
-## Limitações Conhecidas
+Limitações Conhecidas
 
 - Sistema funciona apenas com arquivos no formato específico do INMET
 - Processamento em memória pode ser limitado para arquivos muito grandes
 - Filtro por data depende da consistência do formato de data nos arquivos CSV
 
-## Dados
+Dados
 Este repositório inclui apenas arquivos CSV de exemplo. 
 Para usar o sistema completo, adicione seus próprios dados do INMET na pasta `inmet/ANO/`.
 
-## Desenvolvido por
+Desenvolvido por
 
 Projeto desenvolvido como atividade acadêmica da disciplina Tópicos Especiais - Turma 3INFO-2025 pelos alunos íkaro Nogueira Rossotti e Kezia Luiza do Bomfim Oliveira.
+
